@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CarrosApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>Carros</title>
+
+		<link rel="stylesheet" href="lib/ionic/css/ionic.css">
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+        
+	</head>
+	<body ng-controller="CarrosCtrl">
+        
+        <ion-pane>
+        
+            <ion-header-bar class="bar.dark">
+                <h1 class="title">Listagem de Carros</h1>=        
+            </ion-header-bar>
+            
+            <ion-content>
+                <ion-list>
+                    <ion-item ng-repeat="c in carros">
+                     <h2>ID: {{c.ide}}</h2>
+                     <h3>Nome: {{c.name}}</h3>
+                     <p>Modelo: {{c.brand}}</p>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        
+        </ion-pane>
+        
+	</body>
+</html>
